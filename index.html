@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="menusNav">
+        <nav class="navbar navbar-dark bg-dark py-2 d-none d-lg-block">
+            <div class="container-fluid justify-content-center">
+                <span class="text-white mx-3">Recoger en 30 minutos</span>
+                <span class="text-white mx-3">TOP OFERTAS</span>
+                <span class="text-white mx-3">Financiación</span>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-danger bg-danger py-2">
+            <div class="container-fluid">
+                <!-- Contenedor para dispositivos móviles -->
+                <div class="d-flex flex-column w-100 d-lg-none">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Menú hamburguesa para móviles -->
+                        <button class="btn btn-danger">
+                            <img src="./img/menuh.png" alt="Menú" height="24">
+                        </button>
+
+                        <!-- Logo para móviles -->
+                        <a class="navbar-brand mx-auto" href="#">
+                            <img src="./img/Media_Markt_logo.png" alt="MediaMarkt" height="40">
+                        </a>
+
+                        <!-- Iconos para móviles -->
+                        <div class="d-flex">
+                            <a href="#" class="btn btn-light rounded-circle p-1 me-2">
+                                <img src="./img/account.png" alt="Usuario" height="35">
+                            </a>
+                            <a href="#" class="btn btn-light rounded-circle p-1">
+                                <img src="./img/shopping-cart.png" alt="Carrito" height="35">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Barra de búsqueda (solo para móviles) -->
+                    <form class="d-flex mt-2">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    </form>
+                </div>
+
+                <!-- Contenedor para dispositivos grandes -->
+                <div class="d-none d-lg-flex align-items-center w-100">
+
+                    <!-- Logo para pantallas grandes -->
+                    <a class="navbar-brand mx-3" href="#">
+                        <img src="./img/Media_Markt_logo.png" alt="MediaMarkt" height="100">
+                    </a>
+                    <button class="btn btn-danger">
+                        <img src="./img/menuh.png" alt="Menú" height="24">
+                    </button>
+
+
+
+                    <!-- Barra de búsqueda -->
+                    <form class="d-flex ms-auto me-auto w-50">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    </form>
+
+                    <!-- Iconos para pantallas grandes -->
+                    <div class="d-flex ms-auto">
+                        <a href="#" class="btn btn-light rounded-circle p-1 me-2">
+                            <img src="./img/account.png" alt="Usuario" height="45">
+                        </a>
+                        <a href="#" class="btn btn-light rounded-circle p-1">
+                            <img src="./img/shopping-cart.png" alt="Carrito" height="45">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-danger bg-danger py-2">
+            <div class="container-fluid">
+                <!-- Menú completo para pantallas grandes -->
+                <div class="d-none d-lg-flex flex-nowrap overflow-auto">
+                    <a class="nav-link text-white px-3" href="">Teléfonía</a>
+                    <a class="nav-link text-white px-3" href="#">Informática</a>
+                    <a class="nav-link text-white px-3" href="#">Electrodomésticos</a>
+                    <a class="nav-link text-white px-3" href="#">Televisión</a>
+                    <a class="nav-link text-white px-3" href="#">Videojuegos</a>
+                    <a class="nav-link text-white px-3" href="#">Pequeños Electrodomésticos</a>
+                    <a class="nav-link text-white px-3" href="#">Consolas</a>
+                    <a class="nav-link text-white px-3" href="#">Ofertas</a>
+                </div>
+
+                <!-- Menú reducido para móviles -->
+                <div class="d-flex d-lg-none flex-nowrap overflow-auto">
+                    <a class="nav-link text-white px-3" href="">Teléfonía</a>
+                    <a class="nav-link text-white px-3" href="#">Informática</a>
+                    <a class="nav-link text-white px-3" href="#">Electrodomésticos</a>
+                    <a class="nav-link text-white px-3" href="#">Televisión</a>
+                    <!-- Botón para mostrar más categorías -->
+                    <button class="btn btn-danger px-3" id="showMoreBtn">Más...</button>
+                </div>
+
+                <!-- Menú desplegable oculto inicialmente -->
+                <div class="d-none d-lg-none flex-column" id="moreCategories">
+                    <a class="nav-link text-white px-3" href="#">Videojuegos</a>
+                    <a class="nav-link text-white px-3" href="#">Pequeños Electrodomésticos</a>
+                    <a class="nav-link text-white px-3" href="#">Consolas</a>
+                    <a class="nav-link text-white px-3" href="#">Ofertas</a>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Categorias destacadas -->
+        <div class="container">
+            <h4 class="h3">Categorias destacadas</h4>
+            <div class="row justify-content-center">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="promociones">
+                    </div>
+                    <p>Descubre todas nuestras ofertas</p>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="televisor">
+                    </div>
+                    <p>Televisión</p>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="smartphones">
+                    </div>
+                    <p>Móviles y smartphones</p>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="portatiles">
+                    </div>
+                    <p>Portatiles</p>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="electrodomésticos">
+                    </div>
+                    <p>Electrodomésticos</p>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                    <div class="card">
+                        <img src="./img/category.png" class="img-fluid rounded" alt="pequeños electrodomésticos">
+                    </div>
+                    <p>Pequeños electrodomésticos</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container my-4">
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-6 col-sm-6 col-md-3 text-center">
+                    <div class="border rounded p-3">
+                        <img src="./img/productExample.webp" class="img-fluid" alt="Producto 1">
+                        <h5>Monitor Gaming</h5>
+                        <p>399,00 €</p>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-6 col-sm-6 col-md-3 text-center">
+                    <div class="border rounded p-3">
+                        <img src="./img/productExample.webp" class="img-fluid" alt="Producto 2">
+                        <h5>Videojuego Switch</h5>
+                        <p>50,99 €</p>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-6 col-sm-6 col-md-3 text-center">
+                    <div class="border rounded p-3">
+                        <img src="./img/productExample.webp" class="img-fluid" alt="Producto 3">
+                        <h5>iPhone</h5>
+                        <p>529,00 €</p>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-6 col-sm-6 col-md-3 text-center">
+                    <div class="border rounded p-3">
+                        <img src="./img/productExample.webp" class="img-fluid" alt="Producto 4">
+                        <h5>AirPods</h5>
+                        <p>139,00 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="container my-4">
+            <h4 class="text-center">Nuestros Servicios</h4>
+            <div class="row text-center">
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Garantías">
+                    <p>Garantías</p>
+                </div>
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Reparaciones">
+                    <p>Reparaciones</p>
+                </div>
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Financiación">
+                    <p>Financiación</p>
+                </div>
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Recompra">
+                    <p>Recompra</p>                 
+                </div>
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Cambio">
+                    <p>Cambio</p>
+                </div>
+                <div class="col-4 col-lg mb-3">
+                    <img src="./img/services.png" class="img-fluid w-50" alt="Todos nuestros servicios">
+                    <p>Todos nuestros servicios</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <!-- Footer -->
+        <footer class="bg-light py-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Columna izquierda con los bloques de texto -->
+                    <div class="col-md-8 col-12 mb-3">
+                        <div class="mb-3">
+                            <h5>Contacta con nosotros:</h5>
+                            <p>Formulario de inscripción</p>
+                        </div>
+                        <div class="mb-3">
+                            <h5>¿Necesitas ayuda?</h5>
+                            <p>Preguntas frecuentes</p>
+                        </div>
+                        <div class="mb-3">
+                            <h5>Tu opinión nos importa:</h5>
+                            <p>Encuesta de satisfacción</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen grande para desktop -->
+                    <div class="col-md-4 d-none d-md-flex justify-content-end">
+                        <img src="./img/info.png" alt="Información" style="width: 800px; height: auto;">
+                    </div>
+                    <!-- Imagen pequeña para móviles -->
+                    <div class="col-12 d-flex d-md-none justify-content-center mb-3">
+                        <img src="./img/info.png" alt="Información" class="img-fluid"
+                            style="max-width: 100%; height: auto;">
+                    </div>
+
+                    <!-- Segunda imagen -->
+                    <!-- Imagen grande para desktop -->
+                    <div class="col-md-4 d-none d-md-flex justify-content-end">
+                        <img src="./img/sn.png" alt="Información Extra" style="width: 400px; height: auto;">
+                    </div>
+                    <!-- Imagen pequeña para móviles -->
+                    <div class="col-12 d-flex d-md-none justify-content-center">
+                        <img src="./img/sn.png" alt="Información Extra" class="img-fluid"
+                            style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid ps-4 bg-dark pb-5">
+                <div class="list-unstyled p-4">
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Condiciones de contratación</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Condiciones de contratación
+                        para clientes B2B</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Condiciones de uso web</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Politica de privacidad</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Politica de privacidad
+                        miMediaMarkt</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Términos y condiciones
+                        miMediaMarkt</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Configurar cookies</a>
+                    <a href="#" class="text-white-50 me-3 ms-2 d-block d-sm-inline-flex">Integridad y cumplimiento</a>
+                </div>
+                <div class="text-secondary p-4">
+                    <div class="ms-2">
+                        <p>
+                            Precios válidos para compras por Internet. Consulta los precios aplicados en tiendas
+                            MediaMarkt en Península y Baleares. Envíos únicamente a Península y Baleares. Promociones y
+                            ofertas solo válidas para productos vendidos por MediaMarkt. Ciertos productos pueden tener
+                            una clasificación más alta por formar parte de promociones especiales o campañas
+                            publicitarias. La clasificación del resultado de la búsqueda se basa, además, en los
+                            siguientes parámetros principales (por orden de relevancia descendente): coincidencia del
+                            término de búsqueda con los datos del producto, popularidad del producto, disponibilidad del
+                            producto, relevancia de la categoría del producto y novedad del producto. Publicidad: 1)
+                            Financiación a través de la MediaMarkt Club Card VISA, emitida por la entidad de pago
+                            híbrida CaixaBank Payments & Consumer, E.F.C., E.P., S.A.U., y sujeta a su aprobación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
